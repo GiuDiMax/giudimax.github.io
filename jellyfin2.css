@@ -3,3 +3,7 @@
 .sectionTitle::before{
   content: 'Attenzione! Il server è stato spostato su https://jf.giudimax.top<br/>';
 }
+
+#homeTab::before{
+    content: '<h1>Attenzione! Il server è stato spostato su <a href="https://jf.giudimax.top">https://jf.giudimax.top</a></h1>';
+}
