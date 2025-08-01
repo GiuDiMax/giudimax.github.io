@@ -1,1 +1,5 @@
 /*@import url('https://giudimax.github.io/jellyfin2.css');*/
+
+.sectionTitle::before{
+  content: 'Attenzione! Il server è stato spostato su https://jf.giudimax.top<br/>';
+}
