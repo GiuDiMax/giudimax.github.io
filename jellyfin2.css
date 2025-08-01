@@ -1,15 +1,12 @@
-.sectionTitle{
-  background-color: green !important;
-}
-
-h2{
-  background-color: green !important;
-}
-
-.sectionTitle::before{
+/* .sectionTitle::before{
   content: 'Attenzione! Il server è stato spostato su https://jf.giudimax.top<br/>';
 }
+ */
 
 #homeTab::before{
-    content: '<h2>Attenzione! Il server è stato spostato su <a href="https://jf.giudimax.top">https://jf.giudimax.top</a></h2>';
+  content: "⚠️ Attenzione! Il server è stato spostato su https://jf.giudimax.top";
+  font-size: 2em;
+  display: block;
+  background: green;
+  border-radius: 1em;
 }
