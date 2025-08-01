@@ -1,3 +1,7 @@
+.section0{
+  background: green;
+}
+
 #homeTab::before{
   content: "⚠️ Attenzione! Il server è stato spostato su https://jf.giudimax.top";
   font-size: 2em;
