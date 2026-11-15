@@ -18,14 +18,14 @@
     servizio: [
       ['Campi regionali', 'Servizio in vari campi regionali.'],
       ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ComunichE/Giamo.'],
-      ['Capo Reparto · Reparto di formazione', 'World Scout Jamboree 2027: il nuovo impegno di quest\'anno.']
+      ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027. Il nuovo impegno di quest\'anno.']
     ],
     scorsi: [
       ['Leggere i bisogni dei ragazzi', 'In parte', 'Ho sviluppato una maggiore consapevolezza nel leggere i bisogni dei ragazzi, ma è un percorso ancora aperto: lo porto avanti anche quest\'anno.'],
-      ['Creare rete con altre realtà', 'Fatto', 'La cena solidale di maggio e le associazioni conosciute grazie al mio ruolo di capo gruppo, come la comunità Surprise, hanno dato un contributo concreto alla rete del territorio.'],
+      ['Creare rete con altre realtà', 'Fatto', 'La cena solidale di maggio e le associazioni conosciute grazie al mio ruolo di Capo Gruppo, come la comunità Surprise, hanno dato un contributo concreto alla rete del territorio.'],
       ['Curare la formazione di altri capi', 'In parte', 'Alcuni momenti dedicati nelle comunità capi, come il gioco sulla responsabilità civile e penale. Ho iniziato, c\'è ancora strada da fare.'],
       ['Vivere esperienze vere', 'Tendenza', 'Più che un obiettivo verificabile è un\'inclinazione, e voglio continuare ad averla.'],
-      ['Lasciare il ruolo di capo gruppo', 'Fatto', 'Lascio il ruolo di capo gruppo e mi impegno a proseguire anche per l\'anno prossimo come capo clan. Sono contento di iniziare il nuovo percorso come aiuto capo branco.']
+      ['Lasciare il ruolo di Capo Gruppo', 'Fatto', 'Lascio il ruolo di Capo Gruppo e mi impegno a proseguire anche per l\'anno prossimo come Capo Clan. Sono contento di iniziare il nuovo percorso come aiuto Capo Branco.']
     ],
     analisi: [
       ['Io e la realtà', 'La posizione che ogni Capo assume nel concreto e nei possibili cambiamenti.',
@@ -33,7 +33,7 @@
       ['Io e il servizio', 'La modifica degli atteggiamenti, delle acquisizioni, delle competenze particolari per poter dare una giusta risposta alle esigenze del servizio.',
         'Quest\'anno forse ho un po\' esagerato nel prendermi tanti impegni di servizio dentro lo scoutismo, anche perché avevo intenzione di aprire un\'associazione culturale di cineforum a Capurso. Farò il possibile per garantire comunque un servizio di qualità ai ragazzi.', [31, 122, 77]],
       ['Io e la Comunità Capi, il Progetto Educativo, l\'Associazione', 'La verifica del proprio confrontarsi con gli altri, con le loro caratteristiche, meriti, difetti.',
-        'Il ruolo di capo gruppo mi è servito molto e mi ha divertito altrettanto. Lo lascio con un po\' di amarezza: in così poco tempo non sono riuscito a intercettare tutte le istanze formative di tutti i capi.', [214, 158, 0]],
+        'Il ruolo di Capo Gruppo mi è servito molto e mi ha divertito altrettanto. Lo lascio con un po\' di amarezza: in così poco tempo non sono riuscito a intercettare tutte le istanze formative di tutti i capi.', [214, 158, 0]],
       ['Io e la mia esperienza di fede', 'La necessità di una vita sempre più vissuta coerentemente alla sequela di Cristo ed il conseguente approfondimento delle tematiche religiose.',
         'È un percorso che matura di anno in anno, anche grazie all\'incontro con nuovi parroci, che mi fanno vedere il mondo della fede da punti di vista sempre diversi.', [228, 87, 46]]
     ],
