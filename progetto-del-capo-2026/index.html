@@ -100,10 +100,10 @@
 
 <!-- ======== BARRA AZIONI ======== -->
 <div class="no-print fixed bottom-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
-  <button id="btnPdf" class="pointer-events-auto flex items-center gap-2 bg-gold text-navy font-bold px-5 py-3 rounded-full shadow-xl shadow-navy/30 active:scale-95 transition">
+  <a id="btnPdf" href="Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf?v=1" download="Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf" class="pointer-events-auto flex items-center gap-2 bg-gold text-navy font-bold px-5 py-3 rounded-full shadow-xl shadow-navy/30 active:scale-95 transition">
     <svg class="w-5 h-5"><use href="#i-down"/></svg>
-    <span id="btnPdfLabel">Scarica il PDF</span>
-  </button>
+    <span>Scarica il PDF</span>
+  </a>
 </div>
 
 <main id="doc" class="max-w-3xl mx-auto bg-transparent">
@@ -349,45 +349,10 @@
   </div>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
-<script src="pdf.js?v=1" defer></script>
 <script>
   // Comparsa morbida delle sezioni
   const io = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 }) : null;
   document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
-
-  // Download PDF: documento A4 vero (testo selezionabile), generato da pdf.js
-  const btn = document.getElementById('btnPdf'), label = document.getElementById('btnPdfLabel');
-  function circlePhoto(src) {
-    return new Promise(res => {
-      const im = new Image();
-      im.onload = () => {
-        const S = 400, c = document.createElement('canvas'); c.width = c.height = S;
-        const g = c.getContext('2d');
-        g.fillStyle = '#f2b705'; g.beginPath(); g.arc(S / 2, S / 2, S / 2, 0, 7); g.fill();
-        g.save(); g.beginPath(); g.arc(S / 2, S / 2, S / 2 - 14, 0, 7); g.clip();
-        g.drawImage(im, 14, 14, S - 28, S - 28); g.restore();
-        res(c.toDataURL('image/png'));
-      };
-      im.onerror = () => res(null);
-      im.src = src;
-    });
-  }
-  btn.addEventListener('click', async () => {
-    if (!(window.jspdf && window.buildProgettoPdf)) { window.print(); return; }  // librerie non caricate: stampa del browser
-    label.textContent = 'Preparo il PDF…'; btn.disabled = true;
-    try {
-      const photo = await circlePhoto('foto-giuseppe.jpg?v=2');
-      const doc = await window.buildProgettoPdf(window.jspdf.jsPDF, photo);
-      doc.save('Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf');
-      label.textContent = 'PDF scaricato ✓';
-    } catch (err) {
-      console.error(err); label.textContent = 'Errore, uso la stampa'; window.print();
-    } finally {
-      btn.disabled = false;
-      setTimeout(() => label.textContent = 'Scarica il PDF', 2500);
-    }
-  });
 </script>
 </body>
 </html>
