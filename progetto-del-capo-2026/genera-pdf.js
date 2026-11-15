@@ -15,7 +15,7 @@
       ['Febbraio 2023', 'Nomina a Capo'],
       ['Dicembre 2024', 'MAM R/S · Molfetta'],
       ['Febbraio 2026', 'Campo Capi Gruppo'],
-      ['2026-27', '11 anni di servizio complessivi']
+      ['2026-27', 'Capo Clan e Aiuto Capo Branco', '11 anni di servizio complessivi']
     ],
     servizio: [
       ['Campi regionali e di Zona', 'Servizio in vari campi regionali e campi di Zona.'],
@@ -145,11 +145,12 @@
     // ---------- Formazione e servizio ----------
     h2('Formazione AGESCI ed esperienze di servizio');
     para('Per tenere sempre d\'occhio a che punto siamo.', { style: 'italic', size: 9.5, color: C.grey, justify: false, after: 3 });
-    DATA.timeline.forEach(([d, l]) => {
-      need(7.5);
+    DATA.timeline.forEach(([d, l, sub]) => {
+      need(sub ? 13 : 7.5);
       fill(C.gold); doc.circle(M + 1.8, y + 3.4, 1.3, 'F');
       font('bold', 10); txt(C.royal); doc.text(d, M + 7, y + 4.2);
       font('normal', 10); txt(C.ink); doc.text(l, M + 48, y + 4.2);
+      if (sub) { font('normal', 9); txt(C.grey); doc.text(sub, M + 48, y + 9.2); y += 5; }
       y += 7;
     });
     y += 3;
@@ -176,7 +177,10 @@
     // ---------- Analisi situazionale ----------
     h2('Analisi situazionale e prospettive per il futuro');
     DATA.analisi.forEach(([t, sub, d, col]) => {
-      need(34);
+      font('bold', 11.5); const hT = doc.splitTextToSize(t, CW - 6).length * 5.2 + 0.5;
+      font('italic', 8.8); const hS = doc.splitTextToSize(sub, CW - 5).length * LH(8.8) + 1.5;
+      font('normal', 10); const hD = doc.splitTextToSize(d, CW - 5).length * LH(10) + 1;
+      need(hT + hS + hD + 5);
       const y0 = y;
       font('bold', 11.5); txt(C.navy);
       const tl = doc.splitTextToSize(t, CW - 6);
