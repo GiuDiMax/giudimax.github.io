@@ -4,7 +4,7 @@
     nome: 'Giuseppe A. Di Mauro',
     luogoData: 'Trani, 15 novembre 2026',
     gruppo: 'Gruppo Triggiano 1 · zona Bari Centro · AGESCI',
-    ruoli: [['Capo Clan', [198, 40, 40]], ['Aiuto Capo Branco', [161, 98, 7]]],
+    ruoli: [['Capo Clan', [198, 40, 40], [255, 255, 255]], ['Aiuto Capo Branco', [224, 168, 0], [20, 41, 107]]],
     stats: [['INGRESSO IN CO.CA', '2015'], ['ANNI DI SERVIZIO', '11'], ['ANNO CFA', '2020']],
     timeline: [
       ['2015', 'Ingresso in Comunità Capi'],
@@ -20,7 +20,8 @@
     servizio: [
       ['Campi regionali e di Zona', 'Servizio in vari campi regionali e campi di Zona.'],
       ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ComunichE/Giamo.'],
-      ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027. Il nuovo impegno di quest\'anno.']
+      ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027. Il nuovo impegno di quest\'anno.'],
+      ['Pattuglia di Zona', 'Membro della pattuglia comunicazione di Zona.']
     ],
     scorsi: [
       ['Leggere i bisogni dei ragazzi', 'In parte', 'Ho sviluppato una maggiore consapevolezza nel leggere i bisogni dei ragazzi, ma è un percorso ancora aperto: lo porto avanti anche quest\'anno.'],
@@ -124,10 +125,10 @@
     // ruoli
     font('bold', 8.5); txt(C.grey); doc.text('ATTUALE SERVIZIO', M, y + 4.4);
     let cx = M + 42;
-    DATA.ruoli.forEach(([t, col]) => {
+    DATA.ruoli.forEach(([t, col, tc]) => {
       font('bold', 9.5); const w = doc.getTextWidth(t) + 9;
       fill(col); doc.roundedRect(cx, y, w, 7.5, 3.75, 3.75, 'F');
-      txt([255, 255, 255]); doc.text(t, cx + 4.5, y + 5.2); cx += w + 3;
+      txt(tc); doc.text(t, cx + 4.5, y + 5.2); cx += w + 3;
     });
     y += 14;
 
