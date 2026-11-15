@@ -11,8 +11,10 @@
       ['Gennaio 2016', 'CFT · Taranto'],
       ['Agosto 2017', 'CFM L/C · Rutigliano'],
       ['Ottobre 2020', 'CFA · Aquila'],
-      ['Dicembre 2023', 'CAM E/G · Giovinazzo'],
-      ['Novembre 2025', 'MAM R/S · Molfetta'],
+      ['Novembre 2022', 'CAM E/G · Giovinazzo'],
+      ['Febbraio 2023', 'Nomina a Capo'],
+      ['Dicembre 2024', 'MAM R/S · Molfetta'],
+      ['Febbraio 2026', 'Campo Capi Gruppo'],
       ['2026', '11 anni di servizio complessivi']
     ],
     servizio: [
