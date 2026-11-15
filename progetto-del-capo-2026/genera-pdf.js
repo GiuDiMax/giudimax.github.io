@@ -62,8 +62,9 @@
     let y = 0;
     const fill = c => doc.setFillColor(c[0], c[1], c[2]);
     const txt = c => doc.setTextColor(c[0], c[1], c[2]);
-    const font = (st, sz) => { doc.setFont('helvetica', st); doc.setFontSize(sz); };
-    const LH = sz => sz * 0.3528 * 1.5;
+    const K = 1.15; // fattore di ingrandimento del testo
+    const font = (st, sz) => { doc.setFont('helvetica', st); doc.setFontSize(sz * K); };
+    const LH = sz => sz * K * 0.3528 * 1.5;
     const need = h => { if (y + h > LIM) { doc.addPage(); y = M + 2; } };
 
     function para(t, o) {
@@ -106,7 +107,7 @@
 
     // ruoli
     font('bold', 8.5); txt(C.grey); doc.text('ATTUALE SERVIZIO', M, y + 4.4);
-    let cx = M + 34;
+    let cx = M + 42;
     DATA.ruoli.forEach(([t, col]) => {
       font('bold', 9.5); const w = doc.getTextWidth(t) + 9;
       fill(col); doc.roundedRect(cx, y, w, 7.5, 3.75, 3.75, 'F');
