@@ -18,7 +18,7 @@
       ['2026', '11 anni di servizio complessivi']
     ],
     servizio: [
-      ['Campi regionali', 'Servizio in vari campi regionali.'],
+      ['Campi regionali e di Zona', 'Servizio in vari campi regionali e campi di Zona.'],
       ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ComunichE/Giamo.'],
       ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027. Il nuovo impegno di quest\'anno.']
     ],
