@@ -15,7 +15,7 @@
       ['Febbraio 2023', 'Nomina a Capo'],
       ['Dicembre 2024', 'MAM R/S · Molfetta'],
       ['Febbraio 2026', 'Campo Capi Gruppo'],
-      ['2026', '11 anni di servizio complessivi']
+      ['2026-27', '11 anni di servizio complessivi']
     ],
     servizio: [
       ['Campi regionali e di Zona', 'Servizio in vari campi regionali e campi di Zona.'],
