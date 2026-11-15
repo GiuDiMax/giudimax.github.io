@@ -51,10 +51,12 @@
       ['Fede', [228, 87, 46], [
         'Continuare a far maturare il mio cammino, ascoltando i punti di vista dei sacerdoti che incontro.'], []]
     ],
+    url: 'https://giudimax.github.io/progetto-del-capo-2026/',
+    urlTesto: 'giudimax.github.io/progetto-del-capo-2026',
     scadenza: 'Anno scout 2026/27'
   };
 
-  async function build(jsPDF, photo) {
+  async function build(jsPDF, photo, fonts) {
     const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
     doc.setProperties({ title: 'Il mio Progetto del Capo 2026 - ' + DATA.nome, author: DATA.nome });
     const PW = 210, PH = 297, M = 17, CW = PW - 2 * M, LIM = PH - 20;
@@ -63,7 +65,16 @@
     const fill = c => doc.setFillColor(c[0], c[1], c[2]);
     const txt = c => doc.setTextColor(c[0], c[1], c[2]);
     const K = 1.15; // fattore di ingrandimento del testo
-    const font = (st, sz) => { doc.setFont('helvetica', st); doc.setFontSize(sz * K); };
+    if (fonts) {
+      [['Inter-Regular.ttf', fonts.regular, 'Inter', 'normal'], ['Inter-Italic.ttf', fonts.italic, 'Inter', 'italic'],
+       ['Inter-Bold.ttf', fonts.bold, 'Inter', 'bold'], ['Fraunces-ExtraBold.ttf', fonts.display, 'Fraunces', 'bold']
+      ].forEach(([f, b64, fam, w]) => { doc.addFileToVFS(f, b64); doc.addFont(f, fam, w); });
+    }
+    const font = (st, sz) => {
+      if (fonts) { if (st === 'display') doc.setFont('Fraunces', 'bold'); else doc.setFont('Inter', st); }
+      else doc.setFont('helvetica', st === 'display' ? 'bold' : st);
+      doc.setFontSize(sz * K);
+    };
     const LH = sz => sz * K * 0.3528 * 1.5;
     const need = h => { if (y + h > LIM) { doc.addPage(); y = M + 2; } };
 
@@ -82,7 +93,7 @@
     }
     function h2(t, min) {
       need(min || 45); y += 5;
-      font('bold', 15); txt(C.navy); doc.text(t, M, y + 5); y += 8;
+      font('display', 15); txt(C.navy); doc.text(t, M, y + 5); y += 8;
       fill(C.gold); doc.rect(M, y, 20, 1.1, 'F'); y += 5;
     }
     function bullet(t, color) {
@@ -97,11 +108,13 @@
     fill(C.gold); doc.rect(0, 58, PW, 2, 'F');
     let tx = M;
     if (photo) { doc.addImage(photo, 'PNG', M, 12, 34, 34); tx = M + 42; }
-    font('bold', 22); txt([255, 255, 255]); doc.text('Il mio Progetto del Capo', tx, 26);
+    font('display', 22); txt([255, 255, 255]); doc.text('Il mio Progetto del Capo', tx, 26);
     font('bold', 12.5); doc.text(DATA.nome, tx, 36);
     font('normal', 9.5); txt([210, 222, 250]);
     doc.text(DATA.luogoData, tx, 43);
     doc.text(DATA.gruppo, tx, 48.5);
+    font('bold', 9); txt(C.gold);
+    doc.textWithLink(DATA.urlTesto, tx, 54.5, { url: DATA.url });
     y = 70;
 
     // ruoli
@@ -120,7 +133,7 @@
       const bx = M + i * (bw + 4);
       fill(C.sky); doc.roundedRect(bx, y, bw, 22, 3, 3, 'F');
       font('bold', 7.5); txt(C.grey); doc.text(l, bx + bw / 2, y + 7, { align: 'center' });
-      font('bold', 20); txt(C.royal); doc.text(v, bx + bw / 2, y + 17.5, { align: 'center' });
+      font('display', 20); txt(C.royal); doc.text(v, bx + bw / 2, y + 17.5, { align: 'center' });
     });
     y += 26;
 
@@ -192,7 +205,7 @@
     // ---------- Firma ----------
     need(18); y += 2;
     fill(C.gold); doc.rect(PW / 2 - 10, y, 20, 1, 'F'); y += 7;
-    font('bold', 11); txt(C.navy); doc.text(DATA.nome, PW / 2, y, { align: 'center' }); y += 5.5;
+    font('display', 12); txt(C.navy); doc.text(DATA.nome, PW / 2, y, { align: 'center' }); y += 5.5;
     font('normal', 9.5); txt(C.grey); doc.text(DATA.luogoData, PW / 2, y, { align: 'center' });
 
     // ---------- Piè di pagina ----------
@@ -200,7 +213,10 @@
     for (let i = 1; i <= n; i++) {
       doc.setPage(i);
       font('normal', 8); txt(C.grey);
-      doc.text('Progetto del Capo 2026 · ' + DATA.nome + ' · Gruppo Triggiano 1° · pag. ' + i + '/' + n, PW / 2, PH - 9, { align: 'center' });
+      doc.text('Progetto del Capo 2026 · ' + DATA.nome + ' · Gruppo Triggiano 1° · pag. ' + i + '/' + n, PW / 2, PH - 12, { align: 'center' });
+      font('bold', 8); txt(C.royal);
+      const lw = doc.getTextWidth(DATA.urlTesto);
+      doc.textWithLink(DATA.urlTesto, (PW - lw) / 2, PH - 7.5, { url: DATA.url });
     }
     return doc;
   }
