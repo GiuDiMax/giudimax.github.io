@@ -46,10 +46,12 @@
       ['Servizio', [31, 122, 77], [
         'Essere Capo Clan, garantendo un servizio di qualità ai ragazzi.',
         'Iniziare con entusiasmo il servizio come aiuto Capo Branco.',
-        'Svolgere con cura gli impegni al reparto di formazione per il World Scout Jamboree 2027.'], []],
+        'Svolgere con cura gli impegni al reparto di formazione per il World Scout Jamboree 2027.'],
+        ['Riservare con continuità spazi e tempi precisi della mia vita a chi è più in difficoltà, gli ultimi.']],
       ['Associazione', [214, 158, 0], [
         'Partecipare ad almeno un modulo formativo.',
-        'Organizzare almeno un momento formativo all\'interno della Comunità Capi.'], []],
+        'Organizzare almeno un momento formativo all\'interno della Comunità Capi.'],
+        ['Assumere un incarico all\'interno della zona, una volta concluso il percorso dei vari mandati da Capo Campo.']],
       ['Fede', [228, 87, 46], [
         'Continuare a far maturare il mio cammino, ascoltando i punti di vista dei sacerdoti che incontro.'], []]
     ],
