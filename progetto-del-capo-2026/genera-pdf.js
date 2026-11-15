@@ -27,7 +27,7 @@
       ['Creare rete con altre realtà', 'Fatto', 'La cena solidale di maggio e le associazioni conosciute grazie al mio ruolo di Capo Gruppo, come la comunità Surprise, hanno dato un contributo concreto alla rete del territorio.'],
       ['Curare la formazione di altri capi', 'In parte', 'Alcuni momenti dedicati nelle comunità capi, come il gioco sulla responsabilità civile e penale. Ho iniziato, c\'è ancora strada da fare.'],
       ['Vivere esperienze vere', 'Tendenza', 'Più che un obiettivo verificabile è un\'inclinazione, e voglio continuare ad averla.'],
-      ['Lasciare il ruolo di Capo Gruppo', 'Fatto', 'Lascio il ruolo di Capo Gruppo e mi impegno a proseguire anche per l\'anno prossimo come Capo Clan. Sono contento di iniziare il nuovo percorso come aiuto Capo Branco.']
+      ['Proseguire il ruolo di Capo Clan', 'Fatto', 'Lascio il ruolo di Capo Gruppo e mi impegno a proseguire anche per l\'anno prossimo come Capo Clan. Sono contento di iniziare il nuovo percorso come aiuto Capo Branco.']
     ],
     analisi: [
       ['Io e la realtà', 'La posizione che ogni Capo assume nel concreto e nei possibili cambiamenti.',
