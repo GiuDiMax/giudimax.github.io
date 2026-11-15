@@ -97,12 +97,11 @@
     fill(C.gold); doc.rect(0, 58, PW, 2, 'F');
     let tx = M;
     if (photo) { doc.addImage(photo, 'PNG', M, 12, 34, 34); tx = M + 42; }
-    font('bold', 8.5); txt(C.gold); doc.text('MODELLO DI PROGETTO DEL CAPO 2026', tx, 18);
-    font('bold', 22); txt([255, 255, 255]); doc.text('Il mio Progetto del Capo', tx, 29);
-    font('bold', 12.5); doc.text(DATA.nome, tx, 38);
+    font('bold', 22); txt([255, 255, 255]); doc.text('Il mio Progetto del Capo', tx, 26);
+    font('bold', 12.5); doc.text(DATA.nome, tx, 36);
     font('normal', 9.5); txt([210, 222, 250]);
-    doc.text(DATA.luogoData, tx, 45);
-    doc.text(DATA.gruppo, tx, 50.5);
+    doc.text(DATA.luogoData, tx, 43);
+    doc.text(DATA.gruppo, tx, 48.5);
     y = 70;
 
     // ruoli
