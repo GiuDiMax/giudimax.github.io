@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Il mio Progetto del Capo 2026 · Giuseppe A. Di Mauro</title>
+<meta name="description" content="Progetto del Capo 2026 di Giuseppe A. Di Mauro – Gruppo Scout Triggiano 1°, zona Bari Centro, AGESCI.">
+<meta name="theme-color" content="#1d3a8a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E⚜️%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: { extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], display: ['Fraunces','Georgia','serif'] },
+      colors: { navy:'#14296b', royal:'#1d3a8a', sky:'#e8efff', gold:'#f2b705', forest:'#1f7a4d', ember:'#e4572e' }
+    } }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background:#f4f6fb; -webkit-font-smoothing:antialiased; }
+  .card { background:#fff; border-radius:1.25rem; box-shadow:0 1px 2px rgba(20,41,107,.06), 0 8px 24px -12px rgba(20,41,107,.18); }
+  .hero { background: radial-gradient(1200px 500px at 85% -10%, rgba(242,183,5,.35), transparent 60%),
+                      radial-gradient(900px 500px at -10% 110%, rgba(31,122,77,.45), transparent 55%),
+                      linear-gradient(160deg,#14296b 0%,#1d3a8a 55%,#2a52c9 100%); }
+  .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .65rem; border-radius:999px; font-size:.72rem; font-weight:600; }
+  .reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity:1; transform:none; }
+  .h2 { font-family:'Fraunces',serif; font-weight:800; color:#14296b; letter-spacing:-.01em; }
+  .quote-mark { font-family:'Fraunces',serif; }
+  .dot-line { background-image: radial-gradient(#c7d2f0 1.5px, transparent 1.5px); background-size: 10px 10px; }
+  .tl::before { content:""; position:absolute; left:15px; top:6px; bottom:6px; width:2px; background:linear-gradient(#1d3a8a,#f2b705); border-radius:2px; }
+  @media (prefers-reduced-motion: reduce) { .reveal { transition:none; opacity:1; transform:none; } html{scroll-behavior:auto} }
+  /* Stampa / PDF fallback */
+  @media print {
+    body { background:#fff; }
+    .no-print { display:none !important; }
+    .reveal { opacity:1 !important; transform:none !important; }
+    .card { box-shadow:none; border:1px solid #dbe3f7; break-inside:avoid; }
+    .hero { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  }
+  /* Modalità "esportazione PDF" applicata temporaneamente al documento */
+  .pdf-mode { width:794px !important; max-width:794px !important; background:#fff; }
+  .pdf-mode .reveal { opacity:1 !important; transform:none !important; transition:none !important; }
+  .pdf-mode .card { box-shadow:none; border:1px solid #dbe3f7; break-inside:avoid; page-break-inside:avoid; }
+  .pdf-mode .no-print { display:none !important; }
+</style>
+</head>
+<body class="font-sans text-slate-800">
+
+<!-- ======== SVG SPRITE ======== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- Giglio scout stilizzato (disegno originale, non l'emblema ufficiale) -->
+  <symbol id="giglio" viewBox="0 0 100 100">
+    <g fill="currentColor">
+      <path d="M50 5C61 20 63 40 50 60 37 40 39 20 50 5z"/>
+      <path id="gl-petal" d="M45 58C42 38 24 28 14 38 6 47 12 62 28 61 34 60.500 39 58 41 66L46 66z"/>
+      <use href="#gl-petal" transform="translate(100 0) scale(-1 1)"/>
+      <rect x="30" y="64" width="40" height="7" rx="3.500"/>
+      <path d="M43 73C41 82 44 90 50 95 56 90 59 82 57 73z"/>
+    </g>
+  </symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.8 8.2l-2 5.6-5.6 2 2-5.6z" fill="currentColor"/></symbol>
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M2 20L12 4l10 16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 20l-3.5-7M12 20l3.5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-10z" fill="currentColor"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M10 2h4v7h7v4h-7v9h-4v-9H3V9h7z" fill="currentColor"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="17" cy="9" r="2.5" fill="currentColor" opacity=".7"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6zM14.5 20c0-2.4 1-4.2 2.8-5 2.6-.2 4.7 1.7 4.7 5z" fill="currentColor"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.6" fill="none"><path d="M12 5l-7 13M12 5l7 13M5 18h14"/></g><g fill="currentColor"><circle cx="12" cy="5" r="2.6"/><circle cx="5" cy="18" r="2.6"/><circle cx="19" cy="18" r="2.6"/></g></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM21 5c-3-1.5-6-1.5-9 0v14c3-1.5 6-1.5 9 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9.5"/><ellipse cx="12" cy="12" rx="4" ry="9.5"/><path d="M2.5 12h19"/></g></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" fill="currentColor"/></symbol>
+  <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.2 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ======== BARRA AZIONI ======== -->
+<div class="no-print fixed bottom-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
+  <button id="btnPdf" class="pointer-events-auto flex items-center gap-2 bg-gold text-navy font-bold px-5 py-3 rounded-full shadow-xl shadow-navy/30 active:scale-95 transition">
+    <svg class="w-5 h-5"><use href="#i-down"/></svg>
+    <span id="btnPdfLabel">Scarica il PDF</span>
+  </button>
+</div>
+
+<main id="doc" class="max-w-3xl mx-auto bg-transparent">
+
+  <!-- ======== COPERTINA ======== -->
+  <header class="hero relative overflow-hidden text-white px-6 pt-10 pb-16 sm:rounded-b-[2.5rem]" style="-webkit-print-color-adjust:exact;print-color-adjust:exact">
+    <!-- montagne -->
+    <svg class="absolute bottom-0 left-0 w-full opacity-25" viewBox="0 0 800 160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 160V100l90-60 70 50 110-80 120 90 90-55 130 85 90-50 100 60v20z" fill="#fff"/>
+    </svg>
+    <svg class="absolute -right-10 -top-10 w-56 h-56 text-white opacity-10" aria-hidden="true"><use href="#giglio"/></svg>
+
+    <div class="relative flex items-center gap-3 text-sm font-medium text-white/85">
+      <span class="w-14 h-14 rounded-full bg-white/10 ring-2 ring-white/40 flex items-center justify-center">
+        <svg class="w-9 h-9 text-white" viewBox="0 0 100 100"><use href="#giglio"/></svg>
+      </span>
+      <div class="leading-tight">
+        <div class="uppercase tracking-[.18em] text-[.68rem] text-gold font-bold">AGESCI</div>
+        <div>Associazione Guide e Scouts<br>Cattolici Italiani</div>
+      </div>
+    </div>
+
+    <p class="relative mt-10 text-gold font-semibold tracking-wide text-sm">Modello di Progetto del Capo 2026</p>
+    <h1 class="relative font-display font-extrabold text-4xl sm:text-6xl leading-[1.05] mt-2">Il mio Progetto<br>del Capo</h1>
+    <p class="relative mt-4 text-white/85 max-w-md">Dove sono, dove sto andando e cosa mi impegno a fare. Un anno di strada, letto con onestà.</p>
+
+    <div class="relative mt-8 flex flex-wrap gap-2">
+      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-pin"/></svg> Trani</span>
+      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> 15 novembre 2026</span>
+      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-tent"/></svg> Gruppo Triggiano 1° · zona Bari Centro</span>
+    </div>
+  </header>
+
+  <div class="px-4 -mt-8 pb-28 space-y-5 relative">
+
+    <!-- ======== ANAGRAFICA ======== -->
+    <section class="card p-5 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-14 h-14 shrink-0 rounded-2xl bg-sky text-royal flex items-center justify-center">
+          <svg class="w-8 h-8"><use href="#i-compass"/></svg>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Capo</p>
+          <h2 class="font-display font-extrabold text-2xl text-navy leading-tight">Giuseppe A. Di Mauro</h2>
+          <p class="text-sm text-slate-600 mt-1">Attuale servizio</p>
+          <div class="mt-1.5 flex flex-wrap gap-2">
+            <span class="chip bg-royal text-white">Capo Clan</span>
+            <span class="chip bg-forest text-white">Aiuto Capo Branco</span>
+          </div>
+        </div>
+      </div>
+      <dl class="grid grid-cols-3 gap-3 mt-5 text-center">
+        <div class="rounded-2xl bg-sky py-3"><dt class="text-[.68rem] uppercase tracking-wider text-slate-500 font-semibold">Ingresso in Co.Ca</dt><dd class="font-display text-2xl font-extrabold text-royal">2015</dd></div>
+        <div class="rounded-2xl bg-sky py-3"><dt class="text-[.68rem] uppercase tracking-wider text-slate-500 font-semibold">Anni di servizio</dt><dd class="font-display text-2xl font-extrabold text-royal">11</dd></div>
+        <div class="rounded-2xl bg-sky py-3"><dt class="text-[.68rem] uppercase tracking-wider text-slate-500 font-semibold">CFA</dt><dd class="font-display text-2xl font-extrabold text-royal">2020</dd></div>
+      </dl>
+    </section>
+
+    <!-- ======== FORMAZIONE E SERVIZIO ======== -->
+    <section class="card p-5 reveal">
+      <h2 class="h2 text-2xl flex items-center gap-2"><svg class="w-6 h-6 text-gold"><use href="#i-book"/></svg> Formazione AGESCI ed esperienze di servizio</h2>
+      <p class="text-sm text-slate-500 italic mt-1">Per tenere sempre d'occhio a che punto siamo.</p>
+
+      <div class="tl relative mt-5 pl-10 space-y-5">
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-flame"/></svg></span>
+          <p class="text-xs font-bold text-royal">2015</p>
+          <p class="font-semibold">Ingresso in Comunità Capi</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-check"/></svg></span>
+          <p class="text-xs font-bold text-forest">2020</p>
+          <p class="font-semibold">Campo di Formazione Associativa (CFA)</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-star"/></svg></span>
+          <p class="text-xs font-bold text-amber-600">2026</p>
+          <p class="font-semibold">11 anni di servizio complessivi</p>
+        </div>
+      </div>
+
+      <h3 class="mt-7 text-xs font-bold uppercase tracking-widest text-slate-500">Altre occasioni di servizio</h3>
+      <ul class="mt-3 space-y-3">
+        <li class="flex gap-3 rounded-2xl bg-sky/70 p-3">
+          <svg class="w-6 h-6 text-royal shrink-0"><use href="#i-tent"/></svg>
+          <div><p class="font-semibold leading-tight">Campi regionali</p><p class="text-sm text-slate-600">Servizio in vari campi regionali.</p></div>
+        </li>
+        <li class="flex gap-3 rounded-2xl bg-sky/70 p-3">
+          <svg class="w-6 h-6 text-forest shrink-0"><use href="#i-flame"/></svg>
+          <div><p class="font-semibold leading-tight">Capo Campo</p>
+            <div class="mt-1.5 flex flex-wrap gap-1.5">
+              <span class="chip bg-white text-navy ring-1 ring-royal/20">Piccole Orme</span>
+              <span class="chip bg-white text-navy ring-1 ring-royal/20">I Fantastici 4</span>
+              <span class="chip bg-white text-navy ring-1 ring-royal/20">Missione Soccorso</span>
+              <span class="chip bg-white text-navy ring-1 ring-royal/20">Campetto di specialità ConunichE/Giamo</span>
+            </div></div>
+        </li>
+        <li class="flex gap-3 rounded-2xl bg-gold/25 p-3">
+          <svg class="w-6 h-6 text-navy shrink-0"><use href="#i-globe"/></svg>
+          <div><p class="font-semibold leading-tight">Capo Reparto · Reparto di formazione</p><p class="text-sm text-slate-700">World Scout Jamboree 2027 — il nuovo impegno di quest'anno.</p></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ======== VERIFICA IMPEGNI 2025 ======== -->
+    <section class="card p-5 reveal">
+      <h2 class="h2 text-2xl">Cosa mi ero impegnato a fare</h2>
+      <p class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"><svg class="w-4 h-4"><use href="#i-pin"/></svg> Progetto del Capo di Molfetta · 30 novembre 2025</p>
+
+      <ol class="mt-5 space-y-4">
+        <li class="rounded-2xl border border-slate-200 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-royal"><use href="#i-heart"/></svg> Leggere i bisogni dei ragazzi</p>
+            <span class="chip bg-amber-100 text-amber-800">In parte</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">Ho sviluppato una maggiore consapevolezza nel leggere i bisogni dei ragazzi, ma è un percorso ancora aperto: lo porto avanti anche quest'anno.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-200 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-forest"><use href="#i-net"/></svg> Creare rete con altre realtà</p>
+            <span class="chip bg-emerald-100 text-emerald-800">Fatto</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">La cena solidale di maggio e le associazioni conosciute grazie al mio ruolo di capo gruppo, come la comunità Surprise, hanno dato un contributo concreto alla rete del territorio.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-200 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-royal"><use href="#i-book"/></svg> Curare la formazione di altri capi</p>
+            <span class="chip bg-amber-100 text-amber-800">In parte</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">Alcuni momenti dedicati nelle comunità capi, come il gioco sulla responsabilità civile e penale. Ho iniziato, c'è ancora strada da fare.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-200 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-ember"><use href="#i-flame"/></svg> Vivere esperienze vere</p>
+            <span class="chip bg-sky text-royal">Tendenza</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">Più che un obiettivo verificabile è un'inclinazione, e voglio continuare ad averla.</p>
+        </li>
+        <li class="rounded-2xl border border-slate-200 p-4">
+          <div class="flex items-center justify-between gap-2">
+            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-navy"><use href="#i-compass"/></svg> Lasciare il ruolo di capo gruppo</p>
+            <span class="chip bg-emerald-100 text-emerald-800">Fatto</span>
+          </div>
+          <p class="text-sm text-slate-600 mt-2">Lascio il ruolo di capo gruppo e mi impegno a proseguire anche per l'anno prossimo come capo clan. Sono contento di iniziare il nuovo percorso come aiuto capo branco.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ======== ANALISI SITUAZIONALE ======== -->
+    <section class="reveal">
+      <div class="px-1 mb-3">
+        <h2 class="h2 text-2xl">Analisi situazionale e prospettive per il futuro</h2>
+      </div>
+      <div class="space-y-4">
+
+        <article class="card p-5 border-l-4 border-royal">
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-royal"><use href="#i-globe"/></svg> Io e la realtà</h3>
+          <p class="text-xs text-slate-500 italic">La posizione che ogni Capo assume nel concreto e nei possibili cambiamenti.</p>
+          <p class="mt-3 leading-relaxed">Mi sento apertissimo ai cambiamenti. Allo stesso tempo, ammetto di essere un po' preoccupato per come sta andando il mondo negli ultimi tempi. Nel mio piccolo cerco di fare il possibile.</p>
+        </article>
+
+        <article class="card p-5 border-l-4 border-forest">
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-forest"><use href="#i-tent"/></svg> Io e il servizio</h3>
+          <p class="text-xs text-slate-500 italic">La modifica degli atteggiamenti, delle acquisizioni, delle competenze particolari per poter dare una giusta risposta alle esigenze del servizio.</p>
+          <p class="mt-3 leading-relaxed">Quest'anno forse ho un po' esagerato nel prendermi tanti impegni di servizio dentro lo scoutismo, anche perché avevo intenzione di aprire un'associazione culturale di cineforum a Capurso. Farò il possibile per garantire comunque un servizio di qualità ai ragazzi.</p>
+          <div class="mt-3 inline-flex items-center gap-2 chip bg-sky text-royal"><svg class="w-3.5 h-3.5"><use href="#i-film"/></svg> Progetto cineforum · Capurso</div>
+        </article>
+
+        <article class="card p-5 border-l-4 border-gold">
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-amber-500"><use href="#i-people"/></svg> Io e la Comunità Capi, il Progetto Educativo, l'Associazione</h3>
+          <p class="text-xs text-slate-500 italic">La verifica del proprio confrontarsi con gli altri, con le loro caratteristiche, meriti, difetti.</p>
+          <p class="mt-3 leading-relaxed">Il ruolo di capo gruppo mi è servito molto e mi ha divertito altrettanto. Lo lascio con un po' di amarezza: in così poco tempo non sono riuscito a intercettare tutte le istanze formative di tutti i capi.</p>
+        </article>
+
+        <article class="card p-5 border-l-4 border-ember">
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-ember"><use href="#i-cross"/></svg> Io e la mia esperienza di fede</h3>
+          <p class="text-xs text-slate-500 italic">La necessità di una vita sempre più vissuta coerentemente alla sequela di Cristo ed il conseguente approfondimento delle tematiche religiose.</p>
+          <p class="mt-3 leading-relaxed">È un percorso che matura di anno in anno, anche grazie all'incontro con nuovi parroci, che mi fanno vedere il mondo della fede da punti di vista sempre diversi.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======== IMPEGNI ======== -->
+    <section class="card p-5 reveal">
+      <h2 class="h2 text-2xl">Impegni concreti e verificabili</h2>
+      <p class="text-sm text-slate-500 mt-1">Con le rispettive scadenze.</p>
+
+      <div class="mt-5 space-y-5">
+
+        <div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-globe"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Realtà</h3></div>
+          <div class="rounded-2xl bg-sky/70 divide-y divide-white">
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a leggere con attenzione i bisogni dei ragazzi e mantenere viva la rete con le altre realtà del territorio.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-forest">Lungo termine</p><p>Vivere esperienze vere come tendenza costante del mio modo di fare servizio.</p></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-tent"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Servizio</h3></div>
+          <div class="rounded-2xl bg-sky/70 divide-y divide-white">
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p>
+              <ul class="list-disc pl-5 space-y-1"><li>Essere Capo Clan, garantendo un servizio di qualità ai ragazzi.</li><li>Iniziare con entusiasmo il servizio come aiuto Capo Branco.</li><li>Svolgere con cura gli impegni al reparto di formazione per il World Scout Jamboree 2027.</li></ul>
+              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-people"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Associazione</h3></div>
+          <div class="rounded-2xl bg-sky/70 divide-y divide-white">
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p>
+              <ul class="list-disc pl-5 space-y-1"><li>Partecipare ad almeno un modulo formativo.</li><li>Organizzare almeno un momento formativo all'interno della Comunità Capi.</li></ul>
+              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-ember text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-cross"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Fede</h3></div>
+          <div class="rounded-2xl bg-sky/70 divide-y divide-white">
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a far maturare il mio cammino, ascoltando i punti di vista dei sacerdoti che incontro.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== FIRMA ======== -->
+    <footer class="text-center pt-2 reveal">
+      <svg class="w-10 h-10 mx-auto text-royal" viewBox="0 0 100 100"><use href="#giglio"/></svg>
+      <p class="font-display font-extrabold text-navy mt-2">Giuseppe A. Di Mauro</p>
+      <p class="text-sm text-slate-500">Trani, 15 novembre 2026</p>
+      <p class="text-xs text-slate-400 mt-3">Modello di Progetto del Capo · Gruppo AGESCI Triggiano 1° · zona Bari Centro</p>
+    </footer>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+<script>
+  // Comparsa morbida delle sezioni
+  const io = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 }) : null;
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  // Download PDF
+  const btn = document.getElementById('btnPdf'), label = document.getElementById('btnPdfLabel');
+  btn.addEventListener('click', async () => {
+    if (!window.html2pdf) { window.print(); return; }   // se la libreria non è caricata, usa la stampa del browser
+    const el = document.getElementById('doc');
+    label.textContent = 'Preparo il PDF…'; btn.disabled = true;
+    document.querySelectorAll('.reveal').forEach(n => n.classList.add('in'));
+    el.classList.add('pdf-mode');
+    window.scrollTo(0, 0);
+    try {
+      await html2pdf().set({
+        margin: [8, 8, 8, 8],
+        filename: 'Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf',
+        image: { type: 'jpeg', quality: 0.96 },
+        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 794 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+        pagebreak: { mode: ['css', 'legacy'], avoid: ['.card', 'article', 'li'] }
+      }).from(el).save();
+      label.textContent = 'PDF scaricato ✓';
+    } catch (err) {
+      console.error(err); label.textContent = 'Errore, uso la stampa'; window.print();
+    } finally {
+      el.classList.remove('pdf-mode'); btn.disabled = false;
+      setTimeout(() => label.textContent = 'Scarica il PDF', 2500);
+    }
+  });
+</script>
+</body>
+</html>
