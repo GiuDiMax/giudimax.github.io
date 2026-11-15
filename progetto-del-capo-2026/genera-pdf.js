@@ -3,7 +3,7 @@
   const DATA = {
     nome: 'Giuseppe A. Di Mauro',
     luogoData: 'Trani, 15 novembre 2026',
-    gruppo: 'Gruppo Triggiano 1° · zona Bari Centro · AGESCI',
+    gruppo: 'Gruppo Triggiano 1 · zona Bari Centro · AGESCI',
     ruoli: [['Capo Clan', [198, 40, 40]], ['Aiuto Capo Branco', [161, 98, 7]]],
     stats: [['INGRESSO IN CO.CA', '2015'], ['ANNI DI SERVIZIO', '11'], ['ANNO CFA', '2020']],
     timeline: [
@@ -213,7 +213,7 @@
     for (let i = 1; i <= n; i++) {
       doc.setPage(i);
       font('normal', 8); txt(C.grey);
-      doc.text('Progetto del Capo 2026 · ' + DATA.nome + ' · Gruppo Triggiano 1° · pag. ' + i + '/' + n, PW / 2, PH - 12, { align: 'center' });
+      doc.text('Progetto del Capo 2026 · ' + DATA.nome + ' · Gruppo Triggiano 1 · pag. ' + i + '/' + n, PW / 2, PH - 12, { align: 'center' });
       font('bold', 8); txt(C.royal);
       const lw = doc.getTextWidth(DATA.urlTesto);
       doc.textWithLink(DATA.urlTesto, (PW - lw) / 2, PH - 7.5, { url: DATA.url });
