@@ -25,6 +25,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = {
@@ -45,6 +46,7 @@
   .chip.chip-wrap { white-space:normal; flex-shrink:1; max-width:100%; min-width:0; text-align:left; border-radius:1rem; line-height:1.25; padding:.35rem .75rem; }
   .just, article p.leading-relaxed, ol > li > p.text-sm, .impegni p, .impegni li { text-align:justify; text-justify:inter-word; -webkit-hyphens:auto; hyphens:auto; overflow-wrap:break-word; }
   .impegni p.text-xs, .impegni p.text-\[\.68rem\] { text-align:left; }
+  .ms { font-family:'Material Symbols Rounded'; font-weight:normal; font-style:normal; line-height:1; letter-spacing:normal; text-transform:none; white-space:nowrap; direction:ltr; display:inline-block; width:1em; height:1em; overflow:hidden; flex-shrink:0; user-select:none; -webkit-font-feature-settings:'liga'; font-feature-settings:'liga'; -webkit-font-smoothing:antialiased; }
   .reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity:1; transform:none; }
   .h2 { font-family:'Fraunces',serif; font-weight:800; color:#14296b; letter-spacing:-.01em; }
@@ -81,27 +83,12 @@
       <path d="M43 73C41 82 44 90 50 95 56 90 59 82 57 73z"/>
     </g>
   </symbol>
-  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M15.8 8.2l-2 5.6-5.6 2 2-5.6z" fill="currentColor"/></symbol>
-  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M2 20L12 4l10 16z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 20l-3.5-7M12 20l3.5-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-4-1-6 1-10z" fill="currentColor"/></symbol>
-  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M10 2h4v7h7v4h-7v9h-4v-9H3V9h7z" fill="currentColor"/></symbol>
-  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="17" cy="9" r="2.5" fill="currentColor" opacity=".7"/><path d="M2 20c0-3.5 2.7-6 6-6s6 2.5 6 6zM14.5 20c0-2.4 1-4.2 2.8-5 2.6-.2 4.7 1.7 4.7 5z" fill="currentColor"/></symbol>
-  <symbol id="i-net" viewBox="0 0 24 24"><g stroke="currentColor" stroke-width="1.6" fill="none"><path d="M12 5l-7 13M12 5l7 13M5 18h14"/></g><g fill="currentColor"><circle cx="12" cy="5" r="2.6"/><circle cx="5" cy="18" r="2.6"/><circle cx="19" cy="18" r="2.6"/></g></symbol>
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5c3-1.5 6-1.5 9 0v14c-3-1.5-6-1.5-9 0zM21 5c-3-1.5-6-1.5-9 0v14c3-1.5 6-1.5 9 0z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9.5"/><ellipse cx="12" cy="12" rx="4" ry="9.5"/><path d="M2.5 12h19"/></g></symbol>
-  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21s-8-5.3-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 5.7-8 11-8 11z" fill="currentColor"/></symbol>
-  <symbol id="i-film" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z" fill="currentColor"/><circle cx="12" cy="10" r="2.6" fill="#fff"/></symbol>
-  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></g></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.2 6.1 20.6l1.3-6.6L2.5 9.4l6.6-.8z" fill="currentColor"/></symbol>
 </svg>
 
 <!-- ======== BARRA AZIONI ======== -->
 <div class="no-print fixed bottom-4 inset-x-0 z-50 flex justify-center px-4 pointer-events-none">
   <a id="btnPdf" href="Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf?v=6" download="Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf" class="pointer-events-auto flex items-center gap-2 bg-gold text-navy font-bold px-5 py-3 rounded-full shadow-xl shadow-navy/30 active:scale-95 transition">
-    <svg class="w-5 h-5"><use href="#i-down"/></svg>
+    <span class="ms " style="font-size:1.3rem" aria-hidden="true">download</span>
     <span>Scarica il PDF</span>
   </a>
 </div>
@@ -123,9 +110,9 @@
     <p class="relative mt-4 text-white/85 max-w-md mx-auto text-center">Dove sono, dove sto andando e cosa mi impegno a fare. Un anno di strada, letto con onestà.</p>
 
     <div class="relative mt-8 flex flex-wrap justify-center gap-2">
-      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-pin"/></svg> Trani</span>
-      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> 15 novembre 2026</span>
-      <span class="chip bg-white/15"><svg class="w-3.5 h-3.5"><use href="#i-tent"/></svg> Gruppo Triggiano 1° · zona Bari Centro</span>
+      <span class="chip bg-white/15"><span class="ms " style="font-size:.9rem" aria-hidden="true">location_on</span> Trani</span>
+      <span class="chip bg-white/15"><span class="ms " style="font-size:.9rem" aria-hidden="true">calendar_month</span> 15 novembre 2026</span>
+      <span class="chip bg-white/15"><span class="ms " style="font-size:.9rem" aria-hidden="true">camping</span> Gruppo Triggiano 1° · zona Bari Centro</span>
     </div>
   </header>
 
@@ -154,42 +141,42 @@
 
     <!-- ======== FORMAZIONE E SERVIZIO ======== -->
     <section class="card p-5 reveal">
-      <h2 class="h2 text-2xl flex items-center gap-2"><svg class="w-6 h-6 text-gold"><use href="#i-book"/></svg> Formazione AGESCI ed esperienze di servizio</h2>
+      <h2 class="h2 text-2xl flex items-center gap-2"><span class="ms text-gold" style="font-size:1.6rem" aria-hidden="true">menu_book</span> Formazione AGESCI ed esperienze di servizio</h2>
       <p class="text-sm text-slate-500 italic mt-1">Per tenere sempre d'occhio a che punto siamo.</p>
 
       <div class="tl relative mt-5 pl-10 space-y-5">
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-flame"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">local_fire_department</span></span>
           <p class="text-xs font-bold text-royal">2015</p>
           <p class="font-semibold">Ingresso in Comunità Capi</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-book"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">menu_book</span></span>
           <p class="text-xs font-bold text-royal">Gennaio 2016</p>
           <p class="font-semibold">CFT · Taranto</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-book"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">menu_book</span></span>
           <p class="text-xs font-bold text-forest">Agosto 2017</p>
           <p class="font-semibold">CFM L/C · Rutigliano</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-check"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">check_circle</span></span>
           <p class="text-xs font-bold text-forest">Ottobre 2020</p>
           <p class="font-semibold">CFA · Aquila</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-compass"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">explore</span></span>
           <p class="text-xs font-bold text-amber-600">Dicembre 2023</p>
           <p class="font-semibold">CAM E/G · Giovinazzo</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-compass"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">explore</span></span>
           <p class="text-xs font-bold text-amber-600">Novembre 2025</p>
           <p class="font-semibold">MAM R/S · Molfetta</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-star"/></svg></span>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">star</span></span>
           <p class="text-xs font-bold text-ember">2026</p>
           <p class="font-semibold">11 anni di servizio complessivi</p>
         </div>
@@ -198,11 +185,11 @@
       <h3 class="mt-7 text-xs font-bold uppercase tracking-widest text-slate-500">Altre occasioni di servizio</h3>
       <ul class="mt-3 space-y-3">
         <li class="flex gap-3 rounded-2xl bg-sky/70 p-3">
-          <svg class="w-6 h-6 text-royal shrink-0"><use href="#i-tent"/></svg>
+          <span class="ms text-royal shrink-0" style="font-size:1.6rem" aria-hidden="true">camping</span>
           <div><p class="font-semibold leading-tight">Campi regionali</p><p class="text-sm text-slate-600">Servizio in vari campi regionali.</p></div>
         </li>
         <li class="flex gap-3 rounded-2xl bg-sky/70 p-3">
-          <svg class="w-6 h-6 text-forest shrink-0"><use href="#i-flame"/></svg>
+          <span class="ms text-forest shrink-0" style="font-size:1.6rem" aria-hidden="true">local_fire_department</span>
           <div><p class="font-semibold leading-tight">Capo Campo</p>
             <div class="mt-1.5 flex flex-wrap gap-1.5">
               <span class="chip bg-white text-navy ring-1 ring-royal/20 chip-wrap">Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso</span>
@@ -210,7 +197,7 @@
             </div></div>
         </li>
         <li class="flex gap-3 rounded-2xl bg-gold/25 p-3">
-          <svg class="w-6 h-6 text-navy shrink-0 mt-0.5"><use href="#i-globe"/></svg>
+          <span class="ms text-navy shrink-0 mt-0.5" style="font-size:1.6rem" aria-hidden="true">public</span>
           <div class="min-w-0">
             <p class="font-semibold leading-tight">Capo Reparto</p>
             <p class="text-sm text-slate-700 text-left mt-1" style="text-align:left;hyphens:manual">Reparto di formazione per il World Scout Jamboree 2027</p>
@@ -223,40 +210,40 @@
     <!-- ======== VERIFICA IMPEGNI 2025 ======== -->
     <section class="card p-5 reveal">
       <h2 class="h2 text-2xl">Cosa mi ero impegnato a fare</h2>
-      <p class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"><svg class="w-4 h-4"><use href="#i-pin"/></svg> Progetto del Capo di Molfetta · 30 novembre 2025</p>
+      <p class="text-sm text-slate-500 mt-1 flex items-center gap-1.5"><span class="ms " style="font-size:1.05rem" aria-hidden="true">location_on</span> Progetto del Capo di Molfetta · 30 novembre 2025</p>
 
       <ol class="mt-5 space-y-4">
         <li class="rounded-2xl border border-slate-200 p-4">
           <div class="flex items-center justify-between gap-2">
-            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-royal"><use href="#i-heart"/></svg> Leggere i bisogni dei ragazzi</p>
+            <p class="font-semibold flex items-center gap-2"><span class="ms text-royal" style="font-size:1.3rem" aria-hidden="true">favorite</span> Leggere i bisogni dei ragazzi</p>
             <span class="chip bg-amber-100 text-amber-800">In parte</span>
           </div>
           <p class="text-sm text-slate-600 mt-2">Ho sviluppato una maggiore consapevolezza nel leggere i bisogni dei ragazzi, ma è un percorso ancora aperto: lo porto avanti anche quest'anno.</p>
         </li>
         <li class="rounded-2xl border border-slate-200 p-4">
           <div class="flex items-center justify-between gap-2">
-            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-forest"><use href="#i-net"/></svg> Creare rete con altre realtà</p>
+            <p class="font-semibold flex items-center gap-2"><span class="ms text-forest" style="font-size:1.3rem" aria-hidden="true">hub</span> Creare rete con altre realtà</p>
             <span class="chip bg-emerald-100 text-emerald-800">Fatto</span>
           </div>
           <p class="text-sm text-slate-600 mt-2">La cena solidale di maggio e le associazioni conosciute grazie al mio ruolo di Capo Gruppo, come la comunità Surprise, hanno dato un contributo concreto alla rete del territorio.</p>
         </li>
         <li class="rounded-2xl border border-slate-200 p-4">
           <div class="flex items-center justify-between gap-2">
-            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-royal"><use href="#i-book"/></svg> Curare la formazione di altri capi</p>
+            <p class="font-semibold flex items-center gap-2"><span class="ms text-royal" style="font-size:1.3rem" aria-hidden="true">menu_book</span> Curare la formazione di altri capi</p>
             <span class="chip bg-amber-100 text-amber-800">In parte</span>
           </div>
           <p class="text-sm text-slate-600 mt-2">Alcuni momenti dedicati nelle comunità capi, come il gioco sulla responsabilità civile e penale. Ho iniziato, c'è ancora strada da fare.</p>
         </li>
         <li class="rounded-2xl border border-slate-200 p-4">
           <div class="flex items-center justify-between gap-2">
-            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-ember"><use href="#i-flame"/></svg> Vivere esperienze vere</p>
+            <p class="font-semibold flex items-center gap-2"><span class="ms text-ember" style="font-size:1.3rem" aria-hidden="true">local_fire_department</span> Vivere esperienze vere</p>
             <span class="chip bg-sky text-royal">Tendenza</span>
           </div>
           <p class="text-sm text-slate-600 mt-2">Più che un obiettivo verificabile è un'inclinazione, e voglio continuare ad averla.</p>
         </li>
         <li class="rounded-2xl border border-slate-200 p-4">
           <div class="flex items-center justify-between gap-2">
-            <p class="font-semibold flex items-center gap-2"><svg class="w-5 h-5 text-navy"><use href="#i-compass"/></svg> Lasciare il ruolo di Capo Gruppo</p>
+            <p class="font-semibold flex items-center gap-2"><span class="ms text-navy" style="font-size:1.3rem" aria-hidden="true">explore</span> Lasciare il ruolo di Capo Gruppo</p>
             <span class="chip bg-emerald-100 text-emerald-800">Fatto</span>
           </div>
           <p class="text-sm text-slate-600 mt-2">Lascio il ruolo di Capo Gruppo e mi impegno a proseguire anche per l'anno prossimo come Capo Clan. Sono contento di iniziare il nuovo percorso come aiuto Capo Branco.</p>
@@ -272,25 +259,25 @@
       <div class="space-y-4">
 
         <article class="card p-5 border-l-4 border-royal">
-          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-royal"><use href="#i-globe"/></svg> Io e la realtà</h3>
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><span class="ms text-royal" style="font-size:1.6rem" aria-hidden="true">public</span> Io e la realtà</h3>
           <p class="text-xs text-slate-500 italic">La posizione che ogni Capo assume nel concreto e nei possibili cambiamenti.</p>
           <p class="mt-3 leading-relaxed">Mi sento apertissimo ai cambiamenti. Allo stesso tempo, ammetto di essere un po' preoccupato per come sta andando il mondo negli ultimi tempi. Nel mio piccolo cerco di fare il possibile.</p>
         </article>
 
         <article class="card p-5 border-l-4 border-forest">
-          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-forest"><use href="#i-tent"/></svg> Io e il servizio</h3>
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><span class="ms text-forest" style="font-size:1.6rem" aria-hidden="true">camping</span> Io e il servizio</h3>
           <p class="text-xs text-slate-500 italic">La modifica degli atteggiamenti, delle acquisizioni, delle competenze particolari per poter dare una giusta risposta alle esigenze del servizio.</p>
           <p class="mt-3 leading-relaxed">Quest'anno forse ho un po' esagerato nel prendermi tanti impegni di servizio dentro lo scoutismo, anche perché avevo intenzione di aprire un'associazione culturale di cineforum a Capurso. Farò il possibile per garantire comunque un servizio di qualità ai ragazzi.</p>
         </article>
 
         <article class="card p-5 border-l-4 border-gold">
-          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-amber-500"><use href="#i-people"/></svg> Io e la Comunità Capi, il Progetto Educativo, l'Associazione</h3>
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><span class="ms text-amber-500" style="font-size:1.6rem" aria-hidden="true">groups</span> Io e la Comunità Capi, il Progetto Educativo, l'Associazione</h3>
           <p class="text-xs text-slate-500 italic">La verifica del proprio confrontarsi con gli altri, con le loro caratteristiche, meriti, difetti.</p>
           <p class="mt-3 leading-relaxed">Il ruolo di Capo Gruppo mi è servito molto e mi ha divertito altrettanto. Lo lascio con un po' di amarezza: in così poco tempo non sono riuscito a intercettare tutte le istanze formative di tutti i capi.</p>
         </article>
 
         <article class="card p-5 border-l-4 border-ember">
-          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><svg class="w-6 h-6 text-ember"><use href="#i-cross"/></svg> Io e la mia esperienza di fede</h3>
+          <h3 class="font-display font-extrabold text-navy text-lg flex items-center gap-2"><span class="ms text-ember" style="font-size:1.6rem" aria-hidden="true">church</span> Io e la mia esperienza di fede</h3>
           <p class="text-xs text-slate-500 italic">La necessità di una vita sempre più vissuta coerentemente alla sequela di Cristo ed il conseguente approfondimento delle tematiche religiose.</p>
           <p class="mt-3 leading-relaxed">È un percorso che matura di anno in anno, anche grazie all'incontro con nuovi parroci, che mi fanno vedere il mondo della fede da punti di vista sempre diversi.</p>
         </article>
@@ -305,35 +292,35 @@
       <div class="mt-5 space-y-5">
 
         <div>
-          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-globe"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Realtà</h3></div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-royal text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">public</span></span><h3 class="font-display font-extrabold text-navy text-lg">Realtà</h3></div>
           <div class="rounded-2xl bg-sky/70 divide-y divide-white">
-            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a leggere con attenzione i bisogni dei ragazzi e mantenere viva la rete con le altre realtà del territorio.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a leggere con attenzione i bisogni dei ragazzi e mantenere viva la rete con le altre realtà del territorio.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><span class="ms " style="font-size:.9rem" aria-hidden="true">calendar_month</span> Anno scout 2026/27</p></div>
             <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-forest">Lungo termine</p><p>Vivere esperienze vere come tendenza costante del mio modo di fare servizio.</p></div>
           </div>
         </div>
 
         <div>
-          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-tent"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Servizio</h3></div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-forest text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">camping</span></span><h3 class="font-display font-extrabold text-navy text-lg">Servizio</h3></div>
           <div class="rounded-2xl bg-sky/70 divide-y divide-white">
             <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p>
               <ul class="list-disc pl-5 space-y-1"><li>Essere Capo Clan, garantendo un servizio di qualità ai ragazzi.</li><li>Iniziare con entusiasmo il servizio come aiuto Capo Branco.</li><li>Svolgere con cura gli impegni al reparto di formazione per il World Scout Jamboree 2027.</li></ul>
-              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><span class="ms " style="font-size:.9rem" aria-hidden="true">calendar_month</span> Anno scout 2026/27</p></div>
           </div>
         </div>
 
         <div>
-          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-people"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Associazione</h3></div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-gold text-navy flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">groups</span></span><h3 class="font-display font-extrabold text-navy text-lg">Associazione</h3></div>
           <div class="rounded-2xl bg-sky/70 divide-y divide-white">
             <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p>
               <ul class="list-disc pl-5 space-y-1"><li>Partecipare ad almeno un modulo formativo.</li><li>Organizzare almeno un momento formativo all'interno della Comunità Capi.</li></ul>
-              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+              <p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><span class="ms " style="font-size:.9rem" aria-hidden="true">calendar_month</span> Anno scout 2026/27</p></div>
           </div>
         </div>
 
         <div>
-          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-ember text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-cross"/></svg></span><h3 class="font-display font-extrabold text-navy text-lg">Fede</h3></div>
+          <div class="flex items-center gap-2 mb-2"><span class="w-8 h-8 rounded-xl bg-ember text-white flex items-center justify-center"><span class="ms " style="font-size:1.05rem" aria-hidden="true">church</span></span><h3 class="font-display font-extrabold text-navy text-lg">Fede</h3></div>
           <div class="rounded-2xl bg-sky/70 divide-y divide-white">
-            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a far maturare il mio cammino, ascoltando i punti di vista dei sacerdoti che incontro.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><svg class="w-3.5 h-3.5"><use href="#i-cal"/></svg> Anno scout 2026/27</p></div>
+            <div class="p-3"><p class="text-[.68rem] font-bold uppercase tracking-wider text-royal">Breve termine</p><p>Continuare a far maturare il mio cammino, ascoltando i punti di vista dei sacerdoti che incontro.</p><p class="mt-1 text-xs text-slate-500 flex items-center gap-1"><span class="ms " style="font-size:.9rem" aria-hidden="true">calendar_month</span> Anno scout 2026/27</p></div>
           </div>
         </div>
 
