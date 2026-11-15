@@ -349,35 +349,42 @@
   </div>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="pdf.js?v=1" defer></script>
 <script>
   // Comparsa morbida delle sezioni
   const io = ('IntersectionObserver' in window) ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .08 }) : null;
   document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
 
-  // Download PDF
+  // Download PDF: documento A4 vero (testo selezionabile), generato da pdf.js
   const btn = document.getElementById('btnPdf'), label = document.getElementById('btnPdfLabel');
+  function circlePhoto(src) {
+    return new Promise(res => {
+      const im = new Image();
+      im.onload = () => {
+        const S = 400, c = document.createElement('canvas'); c.width = c.height = S;
+        const g = c.getContext('2d');
+        g.fillStyle = '#f2b705'; g.beginPath(); g.arc(S / 2, S / 2, S / 2, 0, 7); g.fill();
+        g.save(); g.beginPath(); g.arc(S / 2, S / 2, S / 2 - 14, 0, 7); g.clip();
+        g.drawImage(im, 14, 14, S - 28, S - 28); g.restore();
+        res(c.toDataURL('image/png'));
+      };
+      im.onerror = () => res(null);
+      im.src = src;
+    });
+  }
   btn.addEventListener('click', async () => {
-    if (!window.html2pdf) { window.print(); return; }   // se la libreria non è caricata, usa la stampa del browser
-    const el = document.getElementById('doc');
+    if (!(window.jspdf && window.buildProgettoPdf)) { window.print(); return; }  // librerie non caricate: stampa del browser
     label.textContent = 'Preparo il PDF…'; btn.disabled = true;
-    document.querySelectorAll('.reveal').forEach(n => n.classList.add('in'));
-    el.classList.add('pdf-mode');
-    window.scrollTo(0, 0);
     try {
-      await html2pdf().set({
-        margin: [8, 8, 8, 8],
-        filename: 'Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf',
-        image: { type: 'jpeg', quality: 0.96 },
-        html2canvas: { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: 794 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-        pagebreak: { mode: ['css', 'legacy'], avoid: ['.card', 'article', 'li'] }
-      }).from(el).save();
+      const photo = await circlePhoto('foto-giuseppe.jpg?v=2');
+      const doc = await window.buildProgettoPdf(window.jspdf.jsPDF, photo);
+      doc.save('Progetto-del-Capo-2026-Giuseppe-Di-Mauro.pdf');
       label.textContent = 'PDF scaricato ✓';
     } catch (err) {
       console.error(err); label.textContent = 'Errore, uso la stampa'; window.print();
     } finally {
-      el.classList.remove('pdf-mode'); btn.disabled = false;
+      btn.disabled = false;
       setTimeout(() => label.textContent = 'Scarica il PDF', 2500);
     }
   });
