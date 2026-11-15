@@ -26,7 +26,7 @@
   .hero { background: radial-gradient(1200px 500px at 85% -10%, rgba(242,183,5,.35), transparent 60%),
                       radial-gradient(900px 500px at -10% 110%, rgba(31,122,77,.45), transparent 55%),
                       linear-gradient(160deg,#14296b 0%,#1d3a8a 55%,#2a52c9 100%); }
-  .chip { display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .65rem; border-radius:999px; font-size:.72rem; font-weight:600; }
+  .chip { white-space:nowrap; flex-shrink:0; display:inline-flex; align-items:center; gap:.35rem; padding:.2rem .65rem; border-radius:999px; font-size:.72rem; font-weight:600; }
   .reveal { opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease; }
   .reveal.in { opacity:1; transform:none; }
   .h2 { font-family:'Fraunces',serif; font-weight:800; color:#14296b; letter-spacing:-.01em; }
@@ -100,7 +100,7 @@
 
     <div class="relative flex items-center gap-3 text-sm font-medium text-white/85">
       <span class="w-14 h-14 rounded-full bg-white ring-2 ring-white/60 flex items-center justify-center">
-        <img src="https://upload.wikimedia.org/wikipedia/it/4/4c/AGESCI.svg" alt="Logo AGESCI" crossorigin="anonymous" class="w-11 h-11 object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="https://upload.wikimedia.org/wikipedia/it/4/4c/AGESCI.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original" referrerpolicy="no-referrer" alt="Logo AGESCI" crossorigin="anonymous" class="w-11 h-11 object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
         <svg class="w-9 h-9 text-royal" style="display:none" viewBox="0 0 100 100"><use href="#giglio"/></svg>
       </span>
       <div class="leading-tight">
@@ -125,9 +125,7 @@
     <!-- ======== ANAGRAFICA ======== -->
     <section class="card p-5 reveal">
       <div class="flex items-start gap-4">
-        <div class="w-14 h-14 shrink-0 rounded-2xl bg-sky text-royal flex items-center justify-center">
-          <svg class="w-8 h-8"><use href="#i-compass"/></svg>
-        </div>
+        <img src="foto-giuseppe.jpg" alt="Giuseppe A. Di Mauro" width="96" height="96" class="w-24 h-24 shrink-0 rounded-full object-cover ring-4 ring-gold shadow-lg">
         <div>
           <p class="text-xs uppercase tracking-widest text-slate-500 font-semibold">Capo</p>
           <h2 class="font-display font-extrabold text-2xl text-navy leading-tight">Giuseppe A. Di Mauro</h2>
@@ -157,13 +155,33 @@
           <p class="font-semibold">Ingresso in Comunità Capi</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-check"/></svg></span>
-          <p class="text-xs font-bold text-forest">2020</p>
-          <p class="font-semibold">Campo di Formazione Associativa (CFA)</p>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-royal text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-book"/></svg></span>
+          <p class="text-xs font-bold text-royal">Gennaio 2016</p>
+          <p class="font-semibold">CFT · Taranto</p>
         </div>
         <div class="relative">
-          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-star"/></svg></span>
-          <p class="text-xs font-bold text-amber-600">2026</p>
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-book"/></svg></span>
+          <p class="text-xs font-bold text-forest">Agosto 2017</p>
+          <p class="font-semibold">CFM · Bari</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-forest text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-check"/></svg></span>
+          <p class="text-xs font-bold text-forest">Ottobre 2020</p>
+          <p class="font-semibold">CFA · Aquila</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-compass"/></svg></span>
+          <p class="text-xs font-bold text-amber-600">Dicembre 2023</p>
+          <p class="font-semibold">CAM E/G</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-gold text-navy flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-compass"/></svg></span>
+          <p class="text-xs font-bold text-amber-600">Novembre 2025</p>
+          <p class="font-semibold">MAM R/S</p>
+        </div>
+        <div class="relative">
+          <span class="absolute -left-10 top-0 w-8 h-8 rounded-full bg-ember text-white flex items-center justify-center"><svg class="w-4 h-4"><use href="#i-star"/></svg></span>
+          <p class="text-xs font-bold text-ember">2026</p>
           <p class="font-semibold">11 anni di servizio complessivi</p>
         </div>
       </div>
@@ -178,10 +196,8 @@
           <svg class="w-6 h-6 text-forest shrink-0"><use href="#i-flame"/></svg>
           <div><p class="font-semibold leading-tight">Capo Campo</p>
             <div class="mt-1.5 flex flex-wrap gap-1.5">
-              <span class="chip bg-white text-navy ring-1 ring-royal/20">Piccole Orme</span>
-              <span class="chip bg-white text-navy ring-1 ring-royal/20">I Fantastici 4</span>
-              <span class="chip bg-white text-navy ring-1 ring-royal/20">Missione Soccorso</span>
-              <span class="chip bg-white text-navy ring-1 ring-royal/20">Campetto di specialità ConunichE/Giamo</span>
+              <span class="chip bg-white text-navy ring-1 ring-royal/20 !whitespace-normal text-left">Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso</span>
+              <span class="chip bg-white text-navy ring-1 ring-royal/20 !whitespace-normal text-left">Campetto di specialità ConunichE/Giamo</span>
             </div></div>
         </li>
         <li class="flex gap-3 rounded-2xl bg-gold/25 p-3">
@@ -314,7 +330,7 @@
 
     <!-- ======== FIRMA ======== -->
     <footer class="text-center pt-2 reveal">
-      <img src="https://upload.wikimedia.org/wikipedia/it/4/4c/AGESCI.svg" alt="Logo AGESCI" crossorigin="anonymous" class="w-12 h-12 mx-auto object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="https://upload.wikimedia.org/wikipedia/it/4/4c/AGESCI.svg?utm_source=it.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original" referrerpolicy="no-referrer" alt="Logo AGESCI" crossorigin="anonymous" class="w-12 h-12 mx-auto object-contain" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <svg class="w-10 h-10 mx-auto text-royal" style="display:none" viewBox="0 0 100 100"><use href="#giglio"/></svg>
       <p class="font-display font-extrabold text-navy mt-2">Giuseppe A. Di Mauro</p>
       <p class="text-sm text-slate-500">Trani, 15 novembre 2026</p>
