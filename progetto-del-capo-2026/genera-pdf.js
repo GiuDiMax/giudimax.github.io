@@ -17,7 +17,7 @@
     ],
     servizio: [
       ['Campi regionali', 'Servizio in vari campi regionali.'],
-      ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ConunichE/Giamo.'],
+      ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ComunichE/Giamo.'],
       ['Capo Reparto · Reparto di formazione', 'World Scout Jamboree 2027: il nuovo impegno di quest\'anno.']
     ],
     scorsi: [
