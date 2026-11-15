@@ -4,7 +4,7 @@
     nome: 'Giuseppe A. Di Mauro',
     luogoData: 'Trani, 15 novembre 2026',
     gruppo: 'Gruppo Triggiano 1 · zona Bari Centro · AGESCI',
-    ruoli: [['Capo Clan', [198, 40, 40], [255, 255, 255]], ['Aiuto Capo Branco', [224, 168, 0], [20, 41, 107]]],
+    ruoli: [['Capo Clan', [198, 40, 40], [255, 255, 255]], ['Aiuto Capo Branco', [242, 183, 5], [20, 41, 107]]],
     stats: [['INGRESSO IN CO.CA', '2015'], ['ANNI DI SERVIZIO', '11'], ['ANNO CFA', '2020']],
     timeline: [
       ['2015', 'Ingresso in Comunità Capi'],
