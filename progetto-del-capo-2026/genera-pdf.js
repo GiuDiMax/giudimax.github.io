@@ -20,7 +20,7 @@
     servizio: [
       ['Campi regionali e di Zona', 'Servizio in vari campi regionali e campi di Zona.'],
       ['Capo Campo', 'Campetto Piccole Orme · I Fantastici 4 · Missione Soccorso; campetto di specialità ComunichE/Giamo.'],
-      ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027. Il nuovo impegno di quest\'anno.'],
+      ['Capo Reparto', 'Reparto di formazione per il World Scout Jamboree 2027, che si terrà in Polonia. Il nuovo impegno di quest\'anno.', 'jamboree'],
       ['Pattuglia di Zona', 'Membro della pattuglia comunicazione di Zona.']
     ],
     scorsi: [
@@ -61,7 +61,8 @@
     scadenza: 'Anno scout 2026/27'
   };
 
-  async function build(jsPDF, photo, fonts) {
+  async function build(jsPDF, photo, fonts, extra) {
+    extra = extra || {};
     const doc = new jsPDF({ unit: 'mm', format: 'a4', compress: true });
     doc.setProperties({ title: 'Il mio Progetto del Capo 2026 - ' + DATA.nome, author: DATA.nome });
     const PW = 210, PH = 297, M = 17, CW = PW - 2 * M, LIM = PH - 20;
@@ -155,10 +156,12 @@
     });
     y += 3;
     font('bold', 9); txt(C.grey); need(10); doc.text('ALTRE OCCASIONI DI SERVIZIO', M, y + 4); y += 7;
-    DATA.servizio.forEach(([t, d]) => {
-      need(16);
+    DATA.servizio.forEach(([t, d, img]) => {
+      need(img && extra[img] ? 34 : 16);
       font('bold', 10.5); txt(C.navy); doc.text(t, M, y + 4); y += 6;
-      para(d, { size: 10, color: C.ink, after: 3.5, justify: false });
+      para(d, { size: 10, color: C.ink, after: 2, justify: false });
+      if (img && extra[img]) { const w = 52, h = w * 146 / 567; doc.addImage(extra[img], 'PNG', M, y + 1, w, h); y += h + 5; }
+      else y += 1.5;
     });
 
     // ---------- Impegni scorsi ----------
@@ -175,7 +178,7 @@
     });
 
     // ---------- Analisi situazionale ----------
-    h2('Analisi situazionale e prospettive per il futuro');
+    h2('Analisi situazionale e prospettive per il futuro', 75);
     DATA.analisi.forEach(([t, sub, d, col]) => {
       font('bold', 11.5); const hT = doc.splitTextToSize(t, CW - 6).length * 5.2 + 0.5;
       font('italic', 8.8); const hS = doc.splitTextToSize(sub, CW - 5).length * LH(8.8) + 1.5;
@@ -193,7 +196,7 @@
     });
 
     // ---------- Impegni ----------
-    h2('Impegni concreti e verificabili');
+    h2('Impegni concreti e verificabili', 70);
     para('Con le rispettive scadenze.', { style: 'italic', size: 9.5, color: C.grey, justify: false, after: 3 });
     DATA.impegni.forEach(([area, col, brevi, lunghi]) => {
       need(34);
